@@ -1,146 +1,63 @@
-/* Global Styles */
-body {
-    font-family: 'Arial', sans-serif;
+/* styles.css */
+
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Body Styling */
+  body {
     background-color: #f4f4f4;
     color: #333;
+    line-height: 1.6;
   }
   
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
-  
-  /* Login & Signup Forms */
-  .auth-container {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
-  }
-  
-  .auth-container h2 {
-    margin-bottom: 15px;
-    color: #333;
-  }
-  
-  .auth-container input {
-    width: 90%;
-    padding: 8px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .auth-container button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
+  /* Header */
+  .header {
+    background: #007bff;
     color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.5rem;
   }
   
-  .auth-container button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Dashboard */
+  /* Dashboard Container */
   .dashboard-container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
     background: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   }
   
-  .dashboard-container h2 {
-    text-align: center;
-    color: #007bff;
-  }
-  
-  /* Transaction Form */
-  .transaction-form {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .transaction-form input {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 150px;
-  }
-  
-  .transaction-form button {
-    background-color: #28a745;
-    color: white;
-    padding: 8px 15px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  .transaction-form button:hover {
-    background-color: #218838;
-  }
-  
-  /* Dashboard Table */
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-  }
-  
-  th, td {
-    padding: 10px;
-    text-align: center;
-    border: 1px solid #ccc;
-  }
-  
-  th {
-    background-color: #007bff;
-    color: white;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-  
-  tr:hover {
-    background-color: #ddd;
-  }
-  .password-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .password-container input {
-    flex: 1;
-  }
-  
-  .password-container button {
-    margin-left: 8px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-  }
-  
+  /* Buttons */
   button {
+    background: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
     cursor: pointer;
+    border-radius: 5px;
   }
   
+  button:hover {
+    background: #218838;
+  }
+  
+  /* Form Inputs */
+  input, select {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  /* Table */
   table {
     width: 100%;
     border-collapse: collapse;
@@ -148,19 +65,17 @@ body {
   }
   
   th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
+    padding: 10px;
     text-align: left;
+    border-bottom: 1px solid #ddd;
   }
   
   th {
-    background-color: #f4f4f4;
+    background: #007bff;
+    color: white;
   }
   
-  button {
-    margin: 5px;
-    padding: 5px;
-    border: none;
-    cursor: pointer;
+  tr:hover {
+    background: #f1f1f1;
   }
-    
+  

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles.css";
+
 const Signup = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
@@ -56,4 +56,3 @@ const Signup = () => {
 };
 
 export default Signup;
-

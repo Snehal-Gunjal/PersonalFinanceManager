@@ -1,0 +1,91 @@
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+  }
+  
+  .dashboard-header {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .expense-table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .expense-table th, .expense-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .expense-table th {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .expense-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .add-expense-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+  }
+  
+  .add-expense-button:hover {
+    background-color: #0056b3;
+  }
+  .dashboard {
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .expense-form input,
+  .expense-form select,
+  .expense-form button {
+    margin: 5px;
+    padding: 8px;
+  }
+  
+  .filter-sort {
+    margin: 10px 0;
+  }
+  
+  .expense-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .expense-list li {
+    background: #f4f4f4;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .chart-container {
+    margin-top: 20px;
+  }
+    

@@ -1,26 +1,58 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-function AddExpenseForm({ setExpenses }) {
-  const [description, setDescription] = useState('');
-  const [amount, setAmount] = useState('');
-  const [date, setDate] = useState('');
+const AddExpenseForm = ({ addExpense }) => {
+  const [expense, setExpense] = useState({
+    title: "",
+    amount: "",
+    category: "",
+  });
 
-  const handleAddExpense = (e) => {
+  const handleChange = (e) => {
+    setExpense({ ...expense, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setExpenses((prev) => [...prev, { description, amount, date }]);
-    setDescription('');
-    setAmount('');
-    setDate('');
+    if (expense.title && expense.amount && expense.category) {
+      addExpense(expense);
+      setExpense({ title: "", amount: "", category: "" });
+    }
   };
 
   return (
-    <form onSubmit={handleAddExpense}>
-      <input type="text" placeholder="Description" value={description} onChange={(e) => setDescription(e.target.value)} required />
-      <input type="number" placeholder="Amount" value={amount} onChange={(e) => setAmount(e.target.value)} required />
-      <input type="date" value={date} onChange={(e) => setDate(e.target.value)} required />
+    <form onSubmit={handleSubmit}>
+      <label>Title:</label>
+      <input
+        type="text"
+        name="title"
+        value={expense.title}
+        onChange={handleChange}
+        required
+      />
+
+      <label>Amount:</label>
+      <input
+        type="number"
+        name="amount"
+        value={expense.amount}
+        onChange={handleChange}
+        required
+      />
+
+      <label>Category:</label>
+      <select name="category" value={expense.category} onChange={handleChange} required>
+        <option value="" disabled>Select a Category</option>
+        <option value="Food">Food</option>
+        <option value="Travel">Travel</option>
+        <option value="Shopping">Shopping</option>
+        <option value="Bills">Bills</option>
+        <option value="Entertainment">Entertainment</option>
+        <option value="Others">Others</option>
+      </select>
+
       <button type="submit">Add Expense</button>
     </form>
   );
-}
+};
 
 export default AddExpenseForm;

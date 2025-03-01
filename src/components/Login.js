@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles.css";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -17,6 +16,8 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
+    setError(""); // Clear previous errors
+
     const storedUsers = JSON.parse(localStorage.getItem("users")) || [];
     const user = storedUsers.find(u => u.email === email);
 
